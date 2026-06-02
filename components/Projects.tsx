@@ -46,7 +46,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+              <p className="mt-2 text-justify text-sm leading-relaxed text-ink-muted">
                 {p.blurb}
               </p>
 
@@ -54,7 +54,7 @@ export default function Projects() {
                 {p.highlights.map((h, i) => (
                   <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-muted">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" />
-                    {h}
+                    <span className="flex-1 text-justify">{h}</span>
                   </li>
                 ))}
               </ul>

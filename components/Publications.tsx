@@ -28,7 +28,7 @@ export default function Publications() {
                   <p className="text-xs text-ink-faint">
                     {pub.publisher} · {pub.year}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+                  <p className="mt-3 text-justify text-sm leading-relaxed text-ink-muted">
                     {pub.description}
                   </p>
                 </div>
