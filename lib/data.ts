@@ -16,7 +16,7 @@ export const profile = {
 
 export const about = {
   summary:
-    "AI Engineer specializing in production-grade AI agents, LLMs, retrieval-augmented generation, and multimodal multi-agent systems. I build systems that actually ship — from RAG pipelines and multi-agent orchestration with LangChain, LangGraph, and CrewAI, to LLMOps observability and full-stack deployment. I care about the full arc: data, modeling, deployment, and observability.",
+    "AI Engineer specializing in production-grade AI agents, LLMs, retrieval-augmented generation, and multimodal multi-agent systems. I build systems that actually ship: from RAG pipelines and multi-agent orchestration with LangChain, LangGraph, and CrewAI, to LLMOps observability and full-stack deployment. I care about the full arc: data, modeling, deployment, and observability.",
   secondary:
     "Currently completing my M.S. in Applied AI at Stevens (May 2026) and seeking new-grad AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
   interests: [
@@ -98,8 +98,8 @@ export const experience = [
     location: "Hayward, CA",
     period: "Jun 2025 – Aug 2025",
     highlights: [
-      "Built end-to-end ML data ingestion pipelines with Python, PySpark, GCP, BigQuery, and scikit-learn — automating processing of 200+ MP4 files daily and reducing validation latency by 40%.",
-      "Deployed a Streamlit + Superset real-time observability stack over 100K+ records with Dockerized MLflow tracking, HuggingFace integration, ChromaDB embeddings, and FastAPI endpoints — improving ML workflow reliability by 60%.",
+      "Built end-to-end ML data ingestion pipelines with Python, PySpark, GCP, BigQuery, and scikit-learn, automating processing of 200+ MP4 files daily and reducing validation latency by 40%.",
+      "Deployed a Streamlit + Superset real-time observability stack over 100K+ records with Dockerized MLflow tracking, HuggingFace integration, ChromaDB embeddings, and FastAPI endpoints, improving ML workflow reliability by 60%.",
       "Designed video analytics pipelines with the Gemini API and Google Cloud Storage, plus a Windows background app for automated video processing with structured JSON logging.",
     ],
     stack: ["Python", "PySpark", "GCP", "BigQuery", "MLflow", "ChromaDB", "FastAPI", "Streamlit", "Gemini API"],
@@ -110,7 +110,7 @@ export const experience = [
     location: "Bengaluru, India",
     period: "Jan 2024 – Apr 2024",
     highlights: [
-      "Architected generative-AI workflow automation pipelines integrating ReactJS, TypeScript, RESTful APIs, Azure, LangChain, and LlamaIndex — reducing manual process overhead for 100+ employees.",
+      "Architected generative-AI workflow automation pipelines integrating ReactJS, TypeScript, RESTful APIs, Azure, LangChain, and LlamaIndex, reducing manual process overhead for 100+ employees.",
       "Developed a full-stack Time Tracking & Project Management web app with .NET 8, C#, and ReactJS, plus RAG microservices using the OpenAI API for production-grade, low-latency API serving in an Agile/Scrum model.",
     ],
     stack: [".NET 8", "C#", "ReactJS", "TypeScript", "Azure", "LangChain", "LlamaIndex", "OpenAI API", "Docker"],
@@ -121,7 +121,7 @@ export const experience = [
     location: "Bengaluru, India",
     period: "May 2023 – Aug 2023",
     highlights: [
-      "Automated 7+ repetitive accounting workflows (invoice processing, reconciliation) with UiPath Studio and VB.Net — saving an estimated 15 hours per week of manual effort.",
+      "Automated 7+ repetitive accounting workflows (invoice processing, reconciliation) with UiPath Studio and VB.Net, saving an estimated 15 hours per week of manual effort.",
       "Designed reusable bot components that cut future RPA development time by 30%, with documented edge-case handling for non-technical maintainers.",
     ],
     stack: ["UiPath", "VB.Net", "RPA", "Automation"],
@@ -130,7 +130,7 @@ export const experience = [
 
 export const projects = [
   {
-    name: "RAG Enterprise — SEC EDGAR Filing Analyzer",
+    name: "RAG Enterprise: SEC EDGAR Filing Analyzer",
     blurb:
       "Production RAG system for investment banking over real SEC 10-K filings (AAPL, JPM, TSLA, MSFT, GS) with enterprise security, compliance guardrails, and a regulatory audit trail.",
     highlights: [
@@ -146,10 +146,10 @@ export const projects = [
   {
     name: "Agent Orchestration System",
     blurb:
-      "Production-grade multi-agent platform with tool use, persistent memory, and human-in-the-loop escalation — built on a 3-tier agent hierarchy (Supervisor → Specialists → Reviewer).",
+      "Production-grade multi-agent platform with tool use, persistent memory, and human-in-the-loop escalation, built on a 3-tier agent hierarchy (Supervisor → Specialists → Reviewer).",
     highlights: [
       "LangGraph state machine with parallel task execution and a two-tier memory system (Redis + ChromaDB) that improves planning accuracy across sessions.",
-      "Human-in-the-loop escalation with 5 automated triggers, a real-time approval queue with chat-based clarification, and 4 granular approval levels — autonomously completing ~85% of tasks while routing 15% to reviewers with a full audit trail.",
+      "Human-in-the-loop escalation with 5 automated triggers, a real-time approval queue with chat-based clarification, and 4 granular approval levels, autonomously completing ~85% of tasks while routing 15% to reviewers with a full audit trail.",
       "Deployed via Docker Compose with Celery workers, a FastAPI backend, and a Streamlit observability UI with cost tracking, step-through replay, and full execution tracing.",
     ],
     stack: ["LangGraph", "GPT-4o", "Claude Haiku", "Redis", "ChromaDB", "Celery", "FastAPI", "Streamlit", "Supabase"],
@@ -160,7 +160,7 @@ export const projects = [
   {
     name: "LegalLens-AI",
     blurb:
-      "AI-powered legal document analyst that makes contract understanding accessible — a 5-step LangGraph pipeline that extracts, classifies, benchmarks, risk-scores, and explains contract clauses in plain English.",
+      "AI-powered legal document analyst that makes contract understanding accessible: a 5-step LangGraph pipeline that extracts, classifies, benchmarks, risk-scores, and explains contract clauses in plain English.",
     highlights: [
       "Classifies 9 clause types (liability, termination, IP, indemnification, auto-renewal, and more) and scores low/medium/high risk with reasoning.",
       "RAG benchmarking against standard vs. risky clause collections in ChromaDB; MLflow tracks clause-detection F1, retrieval MRR@5, and risk-scoring accuracy.",
@@ -174,7 +174,7 @@ export const projects = [
   {
     name: "WorkFit",
     blurb:
-      "Real-time multimodal posture-monitoring system fusing CNN-based computer vision with flex-sensor data — recognized with the Best Research Paper Award at ICICC 2024.",
+      "Real-time multimodal posture-monitoring system fusing CNN-based computer vision with flex-sensor data, recognized with the Best Research Paper Award at ICICC 2024.",
     highlights: [
       "Achieved 40% discomfort reduction and 85% user adoption in real-world testing.",
       "Designed a deep-learning inference pipeline for simultaneous eye-strain and postural-deviation detection, optimized for low-latency predictions on resource-constrained embedded hardware.",
@@ -195,7 +195,7 @@ export const publications = [
     year: "2024",
     award: "Best Paper Award",
     description:
-      "A real-time multimodal posture-monitoring system fusing CNN-based computer vision with flex-sensor data — achieving 40% discomfort reduction and 85% user adoption, with simultaneous eye-strain and postural-deviation detection optimized for resource-constrained hardware.",
+      "A real-time multimodal posture-monitoring system fusing CNN-based computer vision with flex-sensor data, achieving 40% discomfort reduction and 85% user adoption, with simultaneous eye-strain and postural-deviation detection optimized for resource-constrained hardware.",
   },
   {
     title:
@@ -210,8 +210,8 @@ export const publications = [
 ];
 
 export const certifications = [
-  "AWS Educate — Introduction to Cloud 101",
-  "ICICC 2024 — Best Paper Award (Springer Publication)",
-  "Linux Kernel Development — A Beginner's Guide (LFD103)",
+  "AWS Educate: Introduction to Cloud 101",
+  "ICICC 2024: Best Paper Award (Springer Publication)",
+  "Linux Kernel Development: A Beginner's Guide (LFD103)",
   "What is Data Science?",
 ];

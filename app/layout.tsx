@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.title}`,
+  title: `${profile.name} | ${profile.title}`,
   description: `${profile.name} · ${profile.tagline}. ${profile.org}.`,
   keywords: [
     "AI Engineer",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: profile.fullName }],
   openGraph: {
-    title: `${profile.name} — ${profile.title}`,
+    title: `${profile.name} | ${profile.title}`,
     description: profile.tagline,
     type: "website",
   },
