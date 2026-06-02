@@ -174,10 +174,10 @@ export const projects = [
   {
     name: "WorkFit",
     blurb:
-      "Real-time multimodal posture-monitoring system fusing CNN-based computer vision with flex-sensor data, recognized with the Best Research Paper Award at ICICC 2024.",
+      "A real-time wearable posture-monitoring system that pairs CNN-based computer vision with flex-sensor input to catch slouching and strain as they happen.",
     highlights: [
-      "Achieved 40% discomfort reduction and 85% user adoption in real-world testing.",
-      "Designed a deep-learning inference pipeline for simultaneous eye-strain and postural-deviation detection, optimized for low-latency predictions on resource-constrained embedded hardware.",
+      "Lowered user-reported discomfort by 40% and reached 85% adoption across real-world trials.",
+      "Engineered a low-latency deep-learning inference pipeline that flags eye strain and postural drift together, running on resource-constrained embedded hardware.",
     ],
     stack: ["PyTorch", "CNN", "Computer Vision", "Sensor Fusion", "Embedded ML"],
     github: null,
