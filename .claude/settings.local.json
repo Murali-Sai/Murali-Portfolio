@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(export TMPDIR=/e/tmp TMP=/e/tmp TEMP=/e/tmp)",
+      "Bash(npm run *)",
+      "Bash(npm audit *)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c 'user.name=Murali Sai' -c user.email=murali140824@gmail.com commit -q -m 'Initial portfolio site \\(Next.js + Tailwind\\) *)"
+    ]
+  }
+}

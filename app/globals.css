@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  background-image:
+    radial-gradient(60rem 60rem at 85% -10%, rgba(45, 212, 191, 0.08), transparent 60%),
+    radial-gradient(50rem 50rem at -10% 20%, rgba(16, 185, 129, 0.07), transparent 55%),
+    linear-gradient(180deg, #04110d 0%, #061712 50%, #04100c 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #04110d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.45);
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: #ffffff;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-sm transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply border-accent/30 bg-white/[0.05] shadow-glow -translate-y-0.5;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full border border-accent/20 bg-accent/[0.07] px-3 py-1 text-xs font-medium text-accent-soft;
+  }
+  .section-title {
+    @apply font-display text-2xl font-bold tracking-tight text-ink md:text-3xl;
+  }
+  .section-kicker {
+    @apply mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent;
+  }
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
