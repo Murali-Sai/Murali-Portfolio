@@ -134,7 +134,7 @@ export const projects = [
     blurb:
       "Production RAG system for investment banking over real SEC 10-K filings (AAPL, JPM, TSLA, MSFT, GS) with enterprise security, compliance guardrails, and a regulatory audit trail.",
     highlights: [
-      "Custom EDGAR HTML parser extracting 5 critical 10-K sections; RAGAS evaluation improved Faithfulness 0.57→0.65, Answer Relevancy 0.58→0.68, Context Recall 0.57→0.70.",
+      "Custom EDGAR HTML parser that extracts 5 critical 10-K sections; RAGAS evaluation lifted Faithfulness from 0.57 to 0.65, Answer Relevancy from 0.58 to 0.68, and Context Recall from 0.57 to 0.70.",
       "Enforced investment-banking-grade RBAC (Chinese Wall) at the vector-store layer, MNPI guardrails, and an SEC 17a-4 / FINRA 4511 append-only audit trail.",
       "Deployed via Docker, Terraform-provisioned AWS ECS Fargate, and GitHub Actions CI/CD; scalable to OpenSearch.",
     ],
