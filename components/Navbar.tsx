@@ -48,13 +48,6 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 lg:px-8">
-        <a
-          href="#top"
-          className="font-display text-sm font-bold tracking-tight text-ink transition-colors hover:text-accent-soft"
-        >
-          {profile.name}
-          <span className="text-accent">.</span>
-        </a>
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
             <li key={l.id}>
@@ -75,7 +68,7 @@ export default function Navbar() {
           href={profile.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-soft transition-all hover:bg-accent/20 hover:shadow-glow"
+          className="ml-auto rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-soft transition-all hover:bg-accent/20 hover:shadow-glow"
         >
           Resume
         </a>
