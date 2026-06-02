@@ -189,11 +189,21 @@ export const projects = [
 export const publications = [
   {
     title:
-      "A Size-Conditioned Weighted Box Fusion Ensemble of Faster R-CNN, Mask R-CNN, and YOLO for Cell Nucleus Detection",
+      "WorkFit: Real-Time Multimodal Posture Monitoring with CNN-Based Vision and Flex-Sensor Fusion",
     venue: "International Conference on Innovative Computing and Communication (ICICC 2024)",
     publisher: "Springer",
     year: "2024",
     award: "Best Paper Award",
+    description:
+      "A real-time multimodal posture-monitoring system fusing CNN-based computer vision with flex-sensor data — achieving 40% discomfort reduction and 85% user adoption, with simultaneous eye-strain and postural-deviation detection optimized for resource-constrained hardware.",
+  },
+  {
+    title:
+      "A Size-Conditioned Weighted Box Fusion Ensemble of Faster R-CNN, Mask R-CNN, and YOLO for Cell Nucleus Detection",
+    venue: "International Conference on Innovative Computing and Communication (ICICC 2024)",
+    publisher: "Springer",
+    year: "2024",
+    award: null,
     description:
       "A size-conditioned Weighted Box Fusion ensemble combining Faster R-CNN, Mask R-CNN, and YOLO for robust cell-nucleus detection in biomedical imaging.",
   },
