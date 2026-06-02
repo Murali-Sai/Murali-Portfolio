@@ -18,7 +18,7 @@ export const about = {
   summary:
     "AI Engineer specializing in production-grade AI agents, LLMs, retrieval-augmented generation, and multimodal multi-agent systems. I build systems that actually ship: from RAG pipelines and multi-agent orchestration with LangChain, LangGraph, and CrewAI, to LLMOps observability and full-stack deployment. I care about the full arc: data, modeling, deployment, and observability.",
   secondary:
-    "Currently completing my M.S. in Applied AI at Stevens (May 2026) and seeking new-grad AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
+    "I recently earned my M.S. in Applied AI from Stevens (May 2026) and am seeking new-grad AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
   interests: [
     "Generative AI & LLMs",
     "Retrieval-Augmented Generation",
