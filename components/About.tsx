@@ -11,7 +11,7 @@ export default function About() {
           <p className="text-[15px] leading-relaxed text-ink-muted">
             {about.summary}
           </p>
-          <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
+          <p className="mt-4 text-justify text-[15px] leading-relaxed text-ink-muted">
             {about.secondary}
           </p>
         </div>
