@@ -8,10 +8,10 @@ export default function About() {
     <Section id="about" kicker="Introduction" title="About Me">
       <Reveal>
         <div className="card p-6 md:p-7">
-          <p className="hyphens-auto text-justify text-[15px] leading-relaxed text-ink-muted">
+          <p className="text-[15px] leading-relaxed text-ink-muted">
             {about.summary}
           </p>
-          <p className="mt-4 hyphens-auto text-justify text-[15px] leading-relaxed text-ink-muted">
+          <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
             {about.secondary}
           </p>
         </div>
