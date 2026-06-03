@@ -18,8 +18,8 @@ export default function Home() {
           <div className="min-w-0 space-y-16">
             <About />
             <Skills />
-            <Experience />
             <Projects />
+            <Experience />
             <Publications />
             <Footer />
           </div>

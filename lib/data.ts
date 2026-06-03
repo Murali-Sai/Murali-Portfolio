@@ -130,6 +130,20 @@ export const experience = [
 
 export const projects = [
   {
+    name: "Agent Orchestration System with Tool Use, Memory, and Human in the Loop",
+    blurb:
+      "Production-grade multi-agent platform with tool use, persistent memory, and human-in-the-loop escalation, built on a 3-tier agent hierarchy (Supervisor → Specialists → Reviewer).",
+    highlights: [
+      "Built on a LangGraph state machine that runs tasks in parallel, backed by a two-tier memory system (Redis + ChromaDB) that sharpens planning accuracy across sessions.",
+      "Routes work through human-in-the-loop escalation with 5 automated triggers, a real-time approval queue with chat-based clarification, and 4 granular approval levels, handling roughly 85% of tasks autonomously while sending 15% to reviewers under a full audit trail.",
+      "Ships on Docker Compose with Celery workers, a FastAPI backend, and a Streamlit observability dashboard featuring cost tracking, step-through replay, and end-to-end execution tracing.",
+    ],
+    stack: ["LangGraph", "GPT-4o", "Claude Haiku", "Redis", "ChromaDB", "Celery", "FastAPI", "Streamlit", "Supabase"],
+    github: "https://github.com/Murali-Sai/Agent-Orchestration-System-with-Tool-Use-Memory-and-Human-in-the-Loop",
+    demo: null,
+    featured: true,
+  },
+  {
     name: "RAG Enterprise: SEC EDGAR Filing Analyzer",
     blurb:
       "Production RAG system for investment banking over real SEC 10-K filings (AAPL, JPM, TSLA, MSFT, GS) with enterprise security, compliance guardrails, and a regulatory audit trail.",
@@ -141,20 +155,6 @@ export const projects = [
     stack: ["FastAPI", "Groq (Llama 3.3 70B)", "ChromaDB", "LangChain", "JWT RBAC", "Docker", "Terraform", "AWS ECS Fargate"],
     github: "https://github.com/Murali-Sai/Rag-enterprise",
     demo: "https://web-production-337e5.up.railway.app",
-    featured: true,
-  },
-  {
-    name: "Agent Orchestration System",
-    blurb:
-      "Production-grade multi-agent platform with tool use, persistent memory, and human-in-the-loop escalation, built on a 3-tier agent hierarchy (Supervisor → Specialists → Reviewer).",
-    highlights: [
-      "LangGraph state machine with parallel task execution and a two-tier memory system (Redis + ChromaDB) that improves planning accuracy across sessions.",
-      "Human-in-the-loop escalation with 5 automated triggers, a real-time approval queue with chat-based clarification, and 4 granular approval levels, autonomously completing ~85% of tasks while routing 15% to reviewers with a full audit trail.",
-      "Deployed via Docker Compose with Celery workers, a FastAPI backend, and a Streamlit observability UI with cost tracking, step-through replay, and full execution tracing.",
-    ],
-    stack: ["LangGraph", "GPT-4o", "Claude Haiku", "Redis", "ChromaDB", "Celery", "FastAPI", "Streamlit", "Supabase"],
-    github: "https://github.com/Murali-Sai/Agent-Orchestration-System-with-Tool-Use-Memory-and-Human-in-the-Loop",
-    demo: null,
     featured: true,
   },
   {
