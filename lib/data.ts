@@ -16,7 +16,7 @@ export const profile = {
 
 export const about = {
   summary:
-    "AI Engineer specializing in production-grade AI agents, LLMs, retrieval-augmented generation, and multimodal multi-agent systems. I build systems that actually ship: from RAG pipelines and multi-agent orchestration with LangChain, LangGraph, and CrewAI, to LLMOps observability and full-stack deployment. I care about the full arc: data, modeling, deployment, and observability.",
+    "AI Engineer who builds production AI agents, LLMs, RAG, and multimodal multi-agent systems. I focus on work that ships: RAG pipelines and agent orchestration with LangChain, LangGraph, and CrewAI, plus LLMOps and full-stack deployment. I own the full arc, from data and models to deployment and monitoring.",
   secondary:
     "I recently earned my M.S. in Applied AI from Stevens (May 2026) and am seeking new-grad AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
   interests: [
