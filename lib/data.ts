@@ -4,7 +4,7 @@ export const profile = {
   title: "AI Engineer",
   tagline: "LLM & RAG Systems · Multi-Agent Orchestration · LLMOps",
   org: "M.S. Applied AI, Stevens Institute of Technology",
-  location: "New York City Metro Area",
+  location: "New York City",
   email: "murali140824@gmail.com",
   phone: "+1 (201) 275-6592",
   resume: "/Murali_Sai_Resume.pdf",
