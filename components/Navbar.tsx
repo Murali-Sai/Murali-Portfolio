@@ -47,13 +47,13 @@ export default function Navbar() {
           : "border-b border-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 lg:px-8">
-        <ul className="hidden items-center gap-1 md:flex">
+      <nav className="mx-auto flex max-w-6xl items-center gap-1.5 px-2 py-3.5 sm:gap-2 sm:px-5 lg:px-8">
+        <ul className="no-scrollbar flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto sm:gap-1">
           {links.map((l) => (
-            <li key={l.id}>
+            <li key={l.id} className="shrink-0">
               <a
                 href={`#${l.id}`}
-                className={`rounded-full px-3.5 py-1.5 text-sm transition-colors ${
+                className={`block whitespace-nowrap rounded-full px-1.5 py-1.5 text-[11px] transition-colors sm:px-3.5 sm:text-sm ${
                   active === l.id
                     ? "bg-accent/10 text-accent-soft"
                     : "text-ink-muted hover:text-ink"
@@ -68,7 +68,7 @@ export default function Navbar() {
           href={profile.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-auto rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-soft transition-all hover:bg-accent/20 hover:shadow-glow"
+          className="shrink-0 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1.5 text-[11px] font-medium text-accent-soft transition-all hover:bg-accent/20 hover:shadow-glow sm:px-4 sm:text-sm"
         >
           Resume
         </a>
