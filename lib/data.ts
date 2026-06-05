@@ -148,9 +148,11 @@ export const projects = [
     blurb:
       "Production RAG system for investment banking over real SEC 10-K filings (AAPL, JPM, TSLA, MSFT, GS) with enterprise security, compliance guardrails, and a regulatory audit trail.",
     highlights: [
-      "Custom EDGAR HTML parser that extracts 5 critical 10-K sections; RAGAS evaluation lifted Faithfulness from 0.57 to 0.65, Answer Relevancy from 0.58 to 0.68, and Context Recall from 0.57 to 0.70.",
-      "Enforced investment-banking-grade RBAC (Chinese Wall) at the vector-store layer, MNPI guardrails, and an SEC 17a-4 / FINRA 4511 append-only audit trail.",
-      "Deployed via Docker, Terraform-provisioned AWS ECS Fargate, and GitHub Actions CI/CD; scalable to OpenSearch.",
+      "Built and deployed a production-grade RAG system that answers natural-language questions over real SEC 10-K filings (Apple, JPMorgan, Tesla, Microsoft, Goldman Sachs) pulled live from the EDGAR API, parsing filings into sections and indexing ~6,400 chunks in ChromaDB with sentence-transformer embeddings.",
+      "Engineered investment-bank compliance controls rarely seen in RAG demos: role-based access control with Chinese Wall information barriers enforced at the retrieval layer, financial guardrails (MNPI detection, investment-advice blocking, PII redaction, prompt-injection defense), and a SEC Rule 17a-4 / FINRA 4511 append-only audit trail.",
+      "Exposed the pipeline as an MCP (Model Context Protocol) server, turning the RAG system into 4 LLM-native tools any client (Claude Desktop, Cursor) can invoke, preserving RBAC and guardrails across the open standard.",
+      "Evaluated retrieval quality with RAGAS, diagnosing a broken eval dataset and lifting Context Recall from 0.08 to 0.70 (Faithfulness 0.65, Answer Relevancy 0.68) by regenerating filing-grounded ground truths and tuning retrieval breadth.",
+      "Deployed on Google Cloud Run via a multi-stage Docker build with the vector index baked into the image at build time for instant, scale-to-zero cold starts, plus JWT auth, CI linting, and an interactive demo UI.",
     ],
     stack: ["FastAPI", "Groq (Llama 3.3 70B)", "ChromaDB", "LangChain", "JWT RBAC", "Docker", "Terraform", "AWS ECS Fargate"],
     github: "https://github.com/Murali-Sai/Rag-enterprise",
