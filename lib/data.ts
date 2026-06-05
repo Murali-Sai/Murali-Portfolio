@@ -156,7 +156,7 @@ export const projects = [
     ],
     stack: ["FastAPI", "Groq (Llama 3.3 70B)", "ChromaDB", "LangChain", "JWT RBAC", "Docker", "Terraform", "AWS ECS Fargate"],
     github: "https://github.com/Murali-Sai/Rag-enterprise",
-    demo: "https://web-production-337e5.up.railway.app",
+    demo: "https://rag-enterprise-laa65asupq-uc.a.run.app/",
     featured: true,
   },
   {

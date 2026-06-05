@@ -12,7 +12,19 @@ export default function Projects() {
             <article className="card card-hover p-6 md:p-7">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <h3 className="font-display text-lg font-semibold text-ink">
-                  {p.name}
+                  {p.demo ? (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 transition-colors hover:text-accent-soft"
+                    >
+                      {p.name}
+                      <ExternalLink size={15} className="shrink-0 text-ink-muted" />
+                    </a>
+                  ) : (
+                    p.name
+                  )}
                 </h3>
                 <div className="flex shrink-0 items-center gap-3">
                   {p.featured && (
@@ -30,17 +42,6 @@ export default function Projects() {
                       className="text-ink-muted transition-colors hover:text-accent-soft"
                     >
                       <Github size={18} />
-                    </a>
-                  )}
-                  {p.demo && (
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Live demo"
-                      className="text-ink-muted transition-colors hover:text-accent-soft"
-                    >
-                      <ExternalLink size={18} />
                     </a>
                   )}
                 </div>
@@ -67,28 +68,16 @@ export default function Projects() {
                 ))}
               </div>
 
-              {(p.github || p.demo) && (
+              {p.github && (
                 <div className="mt-5 flex flex-wrap gap-3">
-                  {p.github && (
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-ink-muted transition-all hover:border-accent/40 hover:text-accent-soft"
-                    >
-                      <Github size={14} /> Code
-                    </a>
-                  )}
-                  {p.demo && (
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-xs font-medium text-accent-soft transition-all hover:bg-accent/20"
-                    >
-                      <ExternalLink size={14} /> Live Demo
-                    </a>
-                  )}
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-ink-muted transition-all hover:border-accent/40 hover:text-accent-soft"
+                  >
+                    <Github size={14} /> Code
+                  </a>
                 </div>
               )}
             </article>
