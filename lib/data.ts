@@ -140,7 +140,7 @@ export const projects = [
     ],
     stack: ["LangGraph", "GPT-4o", "Claude Haiku", "Redis", "ChromaDB", "Celery", "FastAPI", "Streamlit", "Supabase"],
     github: "https://github.com/Murali-Sai/Agent-Orchestration-System-with-Tool-Use-Memory-and-Human-in-the-Loop",
-    demo: null,
+    demo: "https://aos-ui.onrender.com",
     featured: true,
   },
   {
