@@ -57,7 +57,7 @@ export default function Projects() {
               </div>
 
               {(p.demo || p.github) && (
-                <div className="mt-5 flex flex-wrap gap-3">
+                <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
                   {p.demo ? (
                     <a
                       href={p.demo}
@@ -76,6 +76,11 @@ export default function Projects() {
                     >
                       <Github size={14} /> Code
                     </a>
+                  )}
+                  {p.demo && (
+                    <span className="text-xs italic text-ink-faint">
+                      First load may take up to a minute (free-tier cold start).
+                    </span>
                   )}
                 </div>
               )}
