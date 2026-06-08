@@ -15,7 +15,7 @@ export default function ProfileSidebar() {
       <div className="card animate-fade-up p-8 text-center">
         <Avatar name={profile.name} />
 
-        <h1 className="mt-5 font-display text-[1.7rem] font-bold tracking-tight text-sheen">
+        <h1 className="mt-5 font-display text-[2.05rem] font-bold leading-tight tracking-tight text-sheen">
           {profile.name}
         </h1>
         <p className="mt-1 text-sm font-semibold text-accent-soft">
