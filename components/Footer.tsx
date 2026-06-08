@@ -32,7 +32,7 @@ export default function Footer() {
         </a>
       </div>
       <p className="text-xs text-ink-faint">
-        © {new Date().getFullYear()} {profile.fullName}. Built with Next.js &amp; Tailwind CSS.
+        © {new Date().getFullYear()} {profile.fullName}.
       </p>
     </footer>
   );
