@@ -12,10 +12,10 @@ const socialLinks = [
 export default function ProfileSidebar() {
   return (
     <aside className="lg:sticky lg:top-24 lg:self-start">
-      <div className="card p-8 text-center">
+      <div className="card animate-fade-up p-8 text-center">
         <Avatar name={profile.name} />
 
-        <h1 className="mt-5 font-display text-2xl font-bold tracking-tight text-ink">
+        <h1 className="mt-5 font-display text-[1.7rem] font-bold tracking-tight text-sheen">
           {profile.name}
         </h1>
         <p className="mt-1 text-sm font-semibold text-accent-soft">
