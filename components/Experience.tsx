@@ -10,7 +10,7 @@ export default function Experience() {
         {experience.map((job, idx) => (
           <Reveal key={`${job.company}-${job.period}`} delay={idx * 70}>
             <div className="relative pl-12">
-              <span className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-full border border-accent/30 bg-bg text-accent">
+              <span className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-none border border-accent/40 bg-bg text-accent">
                 <Briefcase size={16} />
               </span>
               <div className="card card-hover p-6">
@@ -20,7 +20,7 @@ export default function Experience() {
                     <span className="text-accent"> · </span>
                     <span className="text-accent-soft">{job.company}</span>
                   </h3>
-                  <span className="shrink-0 text-xs font-medium text-ink-faint">
+                  <span className="shrink-0 font-mono text-[11px] text-ink-faint">
                     {job.period}
                   </span>
                 </div>
@@ -29,7 +29,7 @@ export default function Experience() {
                 <ul className="mt-4 space-y-2.5">
                   {job.highlights.map((h, i) => (
                     <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-muted">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent/70" />
                       <span className="flex-1 text-justify">{h}</span>
                     </li>
                   ))}

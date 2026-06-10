@@ -16,7 +16,7 @@ export default function Section({
       <Reveal>
         <p className="section-kicker">{kicker}</p>
         <h2 className="section-title">{title}</h2>
-        <div className="mt-2 h-px w-16 bg-gradient-to-r from-accent to-transparent" />
+        <div className="mt-3 h-1 w-14 bg-accent" />
       </Reveal>
       <div className="mt-6">{children}</div>
     </section>

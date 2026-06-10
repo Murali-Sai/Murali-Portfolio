@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Bricolage_Grotesque } from "next/font/google";
+import { Hanken_Grotesk, Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/lib/data";
 
@@ -9,9 +9,15 @@ const sans = Hanken_Grotesk({
   display: "swap",
 });
 
-const display = Bricolage_Grotesque({
+const display = Archivo({
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -57,7 +63,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
+    <html lang="en" className={`${sans.variable} ${display.variable} ${mono.variable}`}>
       <body>
         <div aria-hidden className="grain pointer-events-none fixed inset-0 -z-10" />
         {children}

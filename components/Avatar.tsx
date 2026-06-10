@@ -22,8 +22,8 @@ export default function Avatar({ name }: { name: string }) {
 
   return (
     <div className="relative mx-auto h-36 w-36">
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/40 to-accent-soft/30 blur-md" />
-      <div className="relative h-36 w-36 overflow-hidden rounded-full ring-2 ring-accent/40 ring-offset-2 ring-offset-bg">
+      <div className="absolute -inset-1 rounded-none bg-gradient-to-br from-accent/30 to-accent-soft/20 blur-md" />
+      <div className="relative h-36 w-36 overflow-hidden rounded-none border-2 border-accent">
         {!errored ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img

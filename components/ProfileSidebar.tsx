@@ -15,20 +15,23 @@ export default function ProfileSidebar() {
       <div className="card animate-fade-up p-8 text-center">
         <Avatar name={profile.name} />
 
-        <h1 className="mt-5 font-display text-[2.05rem] font-bold leading-tight tracking-tight text-sheen">
-          {profile.name}
+        <h1 className="mt-5 font-display text-[2rem] font-extrabold uppercase leading-[0.95] tracking-tight text-ink">
+          {profile.name.split(" ").slice(0, -1).join(" ")}{" "}
+          <span className="text-accent">
+            {profile.name.split(" ").slice(-1)}.
+          </span>
         </h1>
-        <p className="mt-1 text-sm font-semibold text-accent-soft">
+        <p className="mt-2 font-mono text-xs uppercase tracking-widest text-accent-soft">
           {profile.title}
         </p>
-        <p className="mt-2 text-xs leading-relaxed text-ink-muted">
+        <p className="mt-3 text-xs leading-relaxed text-ink-muted">
           {profile.tagline}
         </p>
 
-        <div className="mt-4 space-y-1.5 text-xs text-ink-faint">
+        <div className="mt-4 space-y-1.5 font-mono text-[11px] text-ink-faint">
           <p>{profile.org}</p>
           <p className="flex items-center justify-center gap-1.5">
-            <MapPin size={13} className="text-accent" />
+            <MapPin size={12} className="text-accent" />
             {profile.location}
           </p>
         </div>
@@ -41,7 +44,7 @@ export default function ProfileSidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-ink-muted transition-all hover:border-accent/40 hover:bg-accent/10 hover:text-accent-soft"
+              className="flex h-9 w-9 items-center justify-center rounded-none border border-white/15 bg-transparent text-ink-muted transition-all hover:border-accent hover:text-accent-soft"
             >
               <Icon size={16} />
             </a>
@@ -52,7 +55,7 @@ export default function ProfileSidebar() {
           href={profile.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-bg transition-all hover:bg-accent-soft hover:shadow-glow"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-none bg-accent px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-bg transition-all hover:bg-accent-soft"
         >
           <FileDown size={16} />
           Download CV

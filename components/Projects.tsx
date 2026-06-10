@@ -42,7 +42,7 @@ export default function Projects() {
               <ul className="mt-4 space-y-2">
                 {p.highlights.map((h, i) => (
                   <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-muted">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent/70" />
                     <span className="flex-1 text-justify">{h}</span>
                   </li>
                 ))}
@@ -63,18 +63,18 @@ export default function Projects() {
                       href={p.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-xs font-medium text-accent-soft transition-all hover:bg-accent/20"
+                      className="inline-flex items-center gap-1.5 rounded-none border border-accent/60 bg-transparent px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent-soft transition-all hover:bg-accent hover:text-bg"
                     >
-                      <ExternalLink size={14} /> View Deployed Site
+                      View Deployed Site <ExternalLink size={13} />
                     </a>
                   ) : (
                     <a
                       href={p.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-ink-muted transition-all hover:border-accent/40 hover:text-accent-soft"
+                      className="inline-flex items-center gap-1.5 rounded-none border border-white/15 bg-transparent px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-ink-muted transition-all hover:border-accent hover:text-accent-soft"
                     >
-                      <Github size={14} /> Code
+                      <Github size={13} /> Code
                     </a>
                   )}
                   {p.demo && (

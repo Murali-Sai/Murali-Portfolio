@@ -11,12 +11,12 @@ export default function Publications() {
           <Reveal key={pub.title} delay={idx * 70}>
             <article className="card card-hover p-6 md:p-7">
               <div className="flex items-start gap-4">
-                <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent sm:flex">
+                <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-none border border-accent/40 bg-transparent text-accent sm:flex">
                   <BookOpen size={18} />
                 </span>
                 <div>
                   {pub.award && (
-                    <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-300">
+                    <span className="mb-2 inline-flex items-center gap-1.5 rounded-none border border-accent/50 bg-accent/[0.08] px-2.5 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-soft">
                       <Award size={13} />
                       {pub.award}
                     </span>

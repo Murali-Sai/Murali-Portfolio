@@ -9,27 +9,28 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          DEFAULT: "#04110d",
-          soft: "#071a14",
+          DEFAULT: "#0a0a0b",
+          soft: "#141416",
         },
         surface: "rgba(255,255,255,0.03)",
         accent: {
-          DEFAULT: "#10b981",
-          soft: "#2dd4bf",
-          deep: "#0f766e",
+          DEFAULT: "#ff3b2f",
+          soft: "#ff7a70",
+          deep: "#cc2a1e",
         },
         ink: {
-          DEFAULT: "#e6f1ee",
-          muted: "#9fb3ac",
-          faint: "#6b7f78",
+          DEFAULT: "#f4f4f5",
+          muted: "#a1a1aa",
+          faint: "#6c6c74",
         },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(16,185,129,0.15), 0 12px 40px -12px rgba(16,185,129,0.25)",
+        glow: "0 0 0 1px rgba(255,59,47,0.2), 0 16px 50px -16px rgba(255,59,47,0.3)",
       },
       keyframes: {
         "fade-up": {

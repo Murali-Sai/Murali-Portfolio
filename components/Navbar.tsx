@@ -53,12 +53,13 @@ export default function Navbar() {
             <li key={l.id} className="shrink-0">
               <a
                 href={`#${l.id}`}
-                className={`block whitespace-nowrap rounded-full px-1.5 py-1.5 text-[11px] transition-colors sm:px-3.5 sm:text-sm ${
+                className={`block whitespace-nowrap px-1.5 py-1.5 font-mono text-[11px] uppercase tracking-wider transition-colors sm:px-3 sm:text-xs ${
                   active === l.id
-                    ? "bg-accent/10 text-accent-soft"
+                    ? "text-accent-soft"
                     : "text-ink-muted hover:text-ink"
                 }`}
               >
+                <span className="text-accent/60">/</span>
                 {l.label}
               </a>
             </li>
@@ -68,7 +69,7 @@ export default function Navbar() {
           href={profile.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1.5 text-[11px] font-medium text-accent-soft transition-all hover:bg-accent/20 hover:shadow-glow sm:px-4 sm:text-sm"
+          className="shrink-0 rounded-none border border-accent/60 bg-transparent px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent-soft transition-all hover:bg-accent hover:text-bg sm:px-4"
         >
           Resume
         </a>

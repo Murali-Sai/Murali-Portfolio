@@ -13,12 +13,10 @@ html {
 
 body {
   @apply bg-bg text-ink font-sans antialiased;
+  background-color: #0a0a0b;
   background-image:
-    radial-gradient(circle at center, rgba(45, 212, 191, 0.11) 1px, transparent 1.6px),
-    radial-gradient(60rem 60rem at 85% -10%, rgba(45, 212, 191, 0.1), transparent 60%),
-    radial-gradient(50rem 50rem at -10% 20%, rgba(16, 185, 129, 0.08), transparent 55%),
-    linear-gradient(180deg, #04110d 0%, #061712 50%, #04100c 100%);
-  background-size: 26px 26px, 100% 100%, 100% 100%, 100% 100%;
+    radial-gradient(42rem 42rem at 92% -8%, rgba(255, 59, 47, 0.12), transparent 55%),
+    radial-gradient(38rem 38rem at -8% 8%, rgba(255, 59, 47, 0.05), transparent 55%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -31,15 +29,14 @@ body {
   background: #04110d;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(16, 185, 129, 0.25);
-  border-radius: 9999px;
+  background: rgba(255, 59, 47, 0.3);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.45);
+  background: rgba(255, 59, 47, 0.5);
 }
 
 ::selection {
-  background: rgba(16, 185, 129, 0.3);
+  background: rgba(255, 59, 47, 0.35);
   color: #ffffff;
 }
 
@@ -69,27 +66,23 @@ body {
 
 @layer components {
   .card {
-    @apply rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.02] backdrop-blur-sm transition-all duration-300;
+    @apply rounded-none border border-white/10 bg-white/[0.02] transition-all duration-200;
   }
   .card-hover:hover {
-    @apply -translate-y-1 border-accent/40 from-white/[0.08] shadow-glow;
+    @apply border-accent/70 bg-white/[0.04] shadow-glow;
   }
   .pill {
-    @apply inline-flex items-center rounded-full border border-accent/25 bg-accent/[0.08] px-3 py-1 text-xs font-medium text-accent-soft transition-colors hover:border-accent/50 hover:bg-accent/[0.14];
+    @apply inline-flex items-center rounded-none border border-white/15 bg-transparent px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-ink-muted transition-colors hover:border-accent/70 hover:text-accent-soft;
   }
   .section-title {
-    @apply font-display text-3xl font-bold tracking-tight md:text-4xl;
-    background-image: linear-gradient(135deg, #ffffff 0%, #d3efe8 55%, #2dd4bf 125%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    @apply font-display text-4xl font-extrabold uppercase tracking-tight text-ink md:text-5xl;
   }
   .section-kicker {
-    @apply mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent;
+    @apply mb-3 inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.25em] text-accent;
   }
   .section-kicker::before {
-    content: "";
-    @apply h-px w-7 bg-accent/70;
+    content: "/";
+    @apply font-mono text-accent;
   }
 }
 
