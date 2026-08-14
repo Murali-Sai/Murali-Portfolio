@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Publications() {
   return (
-    <Section id="publications" kicker="Research" title="Publications">
+    <Section id="publications" index={5} kicker="Research" title="Publications">
       <div className="space-y-5">
         {publications.map((pub, idx) => (
           <Reveal key={pub.title} delay={idx * 70}>

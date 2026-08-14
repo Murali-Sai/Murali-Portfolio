@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Projects() {
   return (
-    <Section id="projects" kicker="Selected work" title="Projects">
+    <Section id="projects" index={3} kicker="Selected work" title="Projects">
       <div className="grid gap-6">
         {projects.map((p, idx) => (
           <Reveal key={p.name} delay={idx * 60}>

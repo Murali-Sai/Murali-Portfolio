@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Experience() {
   return (
-    <Section id="experience" kicker="Where I've worked" title="Experience">
+    <Section id="experience" index={4} kicker="Where I've worked" title="Experience">
       <div className="relative space-y-6 before:absolute before:left-[19px] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-gradient-to-b before:from-accent/40 before:via-accent/15 before:to-transparent">
         {experience.map((job, idx) => (
           <Reveal key={`${job.company}-${job.period}`} delay={idx * 70}>

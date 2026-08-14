@@ -78,11 +78,14 @@ body {
     @apply font-display text-4xl font-extrabold uppercase tracking-tight text-ink md:text-5xl;
   }
   .section-kicker {
-    @apply mb-3 inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.25em] text-accent;
+    @apply inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.25em] text-accent;
   }
   .section-kicker::before {
     content: "/";
     @apply font-mono text-accent;
+  }
+  .section-index {
+    @apply inline-flex h-6 min-w-[1.75rem] items-center justify-center border border-accent/60 px-1 font-mono text-[0.7rem] font-bold leading-none tracking-widest text-accent;
   }
 }
 

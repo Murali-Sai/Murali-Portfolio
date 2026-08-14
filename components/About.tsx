@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <Section id="about" kicker="Introduction" title="About Me">
+    <Section id="about" index={1} kicker="Introduction" title="About Me">
       <Reveal>
         <div className="card p-6 md:p-7">
           <p className="text-justify text-[15px] leading-relaxed text-ink-muted">
