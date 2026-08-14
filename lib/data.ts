@@ -154,7 +154,7 @@ export const projects = [
       "Evaluated retrieval quality with RAGAS, diagnosing a broken eval dataset and lifting Context Recall from 0.08 to 0.70 (Faithfulness 0.65, Answer Relevancy 0.68) by regenerating filing-grounded ground truths and tuning retrieval breadth.",
       "Deployed on Google Cloud Run via a multi-stage Docker build with the vector index baked into the image at build time for instant, scale-to-zero cold starts, plus JWT auth, CI linting, and an interactive demo UI.",
     ],
-    stack: ["FastAPI", "Groq (Llama 3.3 70B)", "ChromaDB", "LangChain", "JWT RBAC", "Docker", "Terraform", "AWS ECS Fargate"],
+    stack: ["FastAPI", "Groq (Llama 3.3 70B)", "ChromaDB", "LangChain", "MCP", "RAGAS", "sentence-transformers", "JWT RBAC", "Docker", "Google Cloud Run"],
     github: "https://github.com/Murali-Sai/Rag-enterprise",
     demo: "https://rag-enterprise-laa65asupq-uc.a.run.app/",
     featured: true,
