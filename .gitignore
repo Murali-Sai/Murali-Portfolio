@@ -42,3 +42,6 @@ next-env.d.ts
 /Murali pfp*.jpeg
 /po pfp.jpeg
 /Murali.png
+
+# local session handoff notes (not for the public repo)
+/handoff.md
