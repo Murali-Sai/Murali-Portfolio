@@ -114,8 +114,10 @@ export const experience = [
     location: "Bengaluru, India",
     period: "Jan 2024 – Apr 2024",
     highlights: [
-      "Architected generative-AI workflow automation pipelines integrating ReactJS, TypeScript, RESTful APIs, Azure, LangChain, and LlamaIndex, reducing manual process overhead for 100+ employees.",
-      "Developed a full-stack Time Tracking & Project Management web app with .NET 8, C#, and ReactJS, plus RAG microservices using the OpenAI API for production-grade, low-latency API serving in an Agile/Scrum model.",
+      "Traced 2 recurring production exceptions (ObjectDisposedException, OutOfMemoryException) in an Azure Functions backend to a misconfigured middleware pipeline and oversized JSON serialization, documenting root cause findings for engineering remediation.",
+      "Audited 6 backend microservices for legacy Redis session storage usage, identifying services that registered Redis but never used it, and documented findings for a Redis elimination plan tied to the platform's Entra ID migration.",
+      "Documented Microsoft Entra ID app registration and custom role setup guides used to configure authentication and 6 application roles across the development environment.",
+      "Reviewed hosting configuration for a React single page application as part of an Azure App Service to Static Web Apps migration proposal projecting $51.59 in monthly (about $619 annual) hosting savings.",
     ],
     stack: [".NET 8", "C#", "ReactJS", "TypeScript", "Azure", "LangChain", "LlamaIndex", "OpenAI API", "Docker"],
   },
