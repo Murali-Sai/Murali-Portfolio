@@ -119,7 +119,7 @@ export const experience = [
       "Documented Microsoft Entra ID app registration and custom role setup guides used to configure authentication and 6 application roles across the development environment.",
       "Reviewed hosting configuration for a React single page application as part of an Azure App Service to Static Web Apps migration proposal projecting $51.59 in monthly (about $619 annual) hosting savings.",
     ],
-    stack: [".NET 8", "C#", "ReactJS", "TypeScript", "Azure", "LangChain", "LlamaIndex", "OpenAI API", "Docker"],
+    stack: [".NET 8", "C#", "Azure Functions", "Azure", "Entra ID", "Redis", "ReactJS", "TypeScript", "Azure Static Web Apps"],
   },
   {
     role: "RPA Summer Intern",
