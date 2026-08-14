@@ -140,13 +140,13 @@ export const projects = [
     blurb:
       "Production-grade multi-agent platform with tool use, persistent memory, and human-in-the-loop escalation, built on a 3-tier agent hierarchy (Supervisor → Specialists → Reviewer).",
     highlights: [
-      "Built on a LangGraph state machine routing Supervisor to Specialists to Reviewer, with a bounded rework loop: a first below-threshold review reopens every subtask with the reviewer's feedback injected into the specialist prompt, and only a second failure pulls in a human, so retries are automatic and escalation is the last resort.",
+      "Built on a LangGraph state machine routing Supervisor to Specialists to Reviewer with per-agent model selection (GPT-4o for planning, GPT-4o-mini or Claude Haiku for fast review), dispatching independent subtasks in parallel across each dependency frontier, with a bounded rework loop: a first below-threshold review reopens every subtask with the reviewer's feedback injected into the specialist prompt, and only a second failure pulls in a human, so retries are automatic and escalation is the last resort.",
       "Runs a two-tier memory system, Redis for per-task working state and Supabase pgvector for durable semantic memory, that is actively maintained rather than write-only: retrieval ranks by cosine relevance times importance times recency on a 30-day half-life, frequently surfaced memories earn a log-scaled importance boost, and consolidation clusters near-duplicate embeddings down to their highest-importance member.",
-      "Escalates to humans across 4 levels (Notify, Approve Action, Approve Plan, Take Over) on low confidence, repeated failures, sensitive operations, or low review scores, with an approval queue that survives API restarts via Supabase.",
+      "Completes roughly 85% of tasks autonomously and routes the remaining 15% of edge cases to human reviewers under a full audit trail, escalating across 4 levels (Notify, Approve Action, Approve Plan, Take Over) on low confidence, repeated failures, sensitive operations, or low review scores, with an approval queue that survives API restarts via Supabase.",
       "Registers every tool with per-agent permissions, rate limits, and full input/output logging, and bridges in Model Context Protocol servers so external MCP tools sit alongside custom ones indistinguishably to the agents.",
       "Instruments the whole run as OpenTelemetry spans (an agent_task root over llm_call and tool.* children) exported to OTLP or Jaeger, alongside a Streamlit trace explorer with per-task token and cost tracking, covered by 98 tests over routing, the rework loop, escalation, memory scoring, and the HTTP API.",
     ],
-    stack: ["LangGraph", "GPT-4o / 4o-mini", "Supabase pgvector", "Redis", "MCP", "OpenTelemetry", "Celery", "FastAPI", "Streamlit", "Docker"],
+    stack: ["LangGraph", "GPT-4o / 4o-mini", "Claude Haiku", "Supabase pgvector", "Redis", "MCP", "OpenTelemetry", "Celery", "FastAPI", "Streamlit", "Docker"],
     github: "https://github.com/Murali-Sai/Agent-Orchestration-System-with-Tool-Use-Memory-and-Human-in-the-Loop",
     demo: "https://aos-ui.onrender.com",
     featured: true,
