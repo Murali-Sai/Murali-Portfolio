@@ -37,7 +37,7 @@ export const about = {
       degree: "B.Tech, Computer Science (Specialization in ML)",
       school: "PES University",
       location: "Bengaluru, India",
-      period: "Dec 2020 – Nov 2024",
+      period: "Dec 2020 – May 2024",
     },
   ],
 };
