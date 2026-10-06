@@ -99,9 +99,12 @@ export const experience = [
     highlights: [
       "Gathered requirements from healthcare clients in sprint planning and review sessions, then developed and deployed a proof-of-concept real-time Patient Flow Tracking System using multimodal AI (Gemini 2.5 Flash) with chain-of-thought and few-shot prompting, integrating a RAG pipeline that structured unstructured patient notes for real-time insight retrieval.",
       "Cut production ML workflow failures 60% across 100K+ records by deploying a Dockerized observability stack (MLflow, FastAPI, ChromaDB, HuggingFace monitoring), enabling real-time failure detection.",
-      "Authored a 30-query SQL bank to ground an AI chatbot's RAG-based answers to natural-language questions, and built a Superset REST API integration generating dashboard charts on demand, demoing both to non-technical stakeholders with plain-language visuals to confirm they met their needs.",
+      "Authored a 30-query SQL bank to ground an AI chatbot's RAG-based answers to natural-language questions, working in Apache Superset SQL Lab to surface insights on patient outcomes, departmental performance, and doctor productivity.",
+      "Automated end-to-end Superset chart creation through its REST API and Microsoft Power Automate, dynamically configuring metrics to cut repetitive chart-building effort by roughly 80%, and demoed the results to non-technical stakeholders with plain-language visuals to confirm they met their needs.",
+      "Built and deployed a Streamlit hospital analytics dashboard with global filters synced across every chart, plus an LLM-driven chart recommender that cut user effort by 50%.",
+      "Processed 100+ hours of hospital CCTV footage through a Python video-analysis pipeline (OpenCV, Pandas) that extracted frame-level data into structured JSON with precise event timestamps, eliminating the manual video review step.",
     ],
-    stack: ["Python", "SQL", "Gemini 2.5 Flash", "RAG", "Docker", "MLflow", "FastAPI", "ChromaDB", "HuggingFace", "Superset"],
+    stack: ["Python", "SQL", "Gemini 2.5 Flash", "RAG", "OpenCV", "Pandas", "Streamlit", "Superset", "Power Automate", "Docker", "MLflow", "FastAPI", "ChromaDB", "HuggingFace"],
   },
   {
     role: "AI & Automation Intern",
