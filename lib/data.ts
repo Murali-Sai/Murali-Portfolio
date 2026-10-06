@@ -100,7 +100,7 @@ export const experience = [
     role: "Data Science Intern",
     company: "QuerKey Inc.",
     location: "Hayward, CA",
-    period: "Jun 2025 – Aug 2025",
+    period: "Jun 2025 – May 2026",
     highlights: [
       "Built end-to-end ML data ingestion pipelines with Python, PySpark, GCP, BigQuery, and scikit-learn, automating processing of 200+ MP4 files daily and reducing validation latency by 40%.",
       "Deployed a Streamlit + Superset real-time observability stack over 100K+ records with Dockerized MLflow tracking, HuggingFace integration, ChromaDB embeddings, and FastAPI endpoints, improving ML workflow reliability by 60%.",
@@ -112,7 +112,7 @@ export const experience = [
     role: "AI & Automation Intern",
     company: "VIEW Group India (formerly VIEW Synergy)",
     location: "Bengaluru, India",
-    period: "Jan 2024 – Apr 2024",
+    period: "Jan 2024 – Aug 2024",
     highlights: [
       "Reviewed the React frontend, .NET Azure Functions API, and MySQL stored-procedure layers of a live production platform as part of a cross-functional modernization team, tracing 2 recurring exceptions (ObjectDisposedException, OutOfMemoryException) to a misconfigured middleware pipeline and oversized JSON serialization, and surfacing SQL-injection vulnerabilities that fed into a 94-issue security assessment.",
       "Built and tested a new Roles/Designations CRUD feature end to end, adding MySQL stored procedures, a .NET API layer, and a React frontend.",
