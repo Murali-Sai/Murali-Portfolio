@@ -5,7 +5,7 @@ export const profile = {
   tagline: "LLM & RAG Systems · Multi-Agent Orchestration · LLMOps",
   org: "M.S. Applied AI, Stevens Institute of Technology",
   location: "New York City",
-  email: "murali140824@gmail.com",
+  email: "muralijaps@gmail.com",
   phone: "+1 (201) 275-6592",
   resume: "/Murali_Sai_Resume.pdf",
   socials: {
@@ -97,11 +97,11 @@ export const experience = [
     location: "Hayward, CA",
     period: "Jun 2025 – May 2026",
     highlights: [
-      "Built end-to-end ML data ingestion pipelines with Python, PySpark, GCP, BigQuery, and scikit-learn, automating processing of 200+ MP4 files daily and reducing validation latency by 40%.",
-      "Deployed a Streamlit + Superset real-time observability stack over 100K+ records with Dockerized MLflow tracking, HuggingFace integration, ChromaDB embeddings, and FastAPI endpoints, improving ML workflow reliability by 60%.",
-      "Designed video analytics pipelines with the Gemini API and Google Cloud Storage, plus a Windows background app for automated video processing with structured JSON logging.",
+      "Gathered requirements from healthcare clients in sprint planning and review sessions, then developed and deployed a proof-of-concept real-time Patient Flow Tracking System using multimodal AI (Gemini 2.5 Flash) with chain-of-thought and few-shot prompting, integrating a RAG pipeline that structured unstructured patient notes for real-time insight retrieval.",
+      "Cut production ML workflow failures 60% across 100K+ records by deploying a Dockerized observability stack (MLflow, FastAPI, ChromaDB, HuggingFace monitoring), enabling real-time failure detection.",
+      "Authored a 30-query SQL bank to ground an AI chatbot's RAG-based answers to natural-language questions, and built a Superset REST API integration generating dashboard charts on demand, demoing both to non-technical stakeholders with plain-language visuals to confirm they met their needs.",
     ],
-    stack: ["Python", "PySpark", "GCP", "BigQuery", "MLflow", "ChromaDB", "FastAPI", "Streamlit", "Gemini API"],
+    stack: ["Python", "SQL", "Gemini 2.5 Flash", "RAG", "Docker", "MLflow", "FastAPI", "ChromaDB", "HuggingFace", "Superset"],
   },
   {
     role: "AI & Automation Intern",
