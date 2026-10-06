@@ -1,7 +1,7 @@
 export const profile = {
   name: "Murali Sai",
   fullName: "Murali Sai Buddakkagari Venkata",
-  title: "AI Engineer",
+  title: "AI/ML Engineer",
   tagline: "LLM & RAG Systems · Multi-Agent Orchestration · LLMOps",
   org: "M.S. Applied AI, Stevens Institute of Technology",
   location: "New York City",
@@ -16,7 +16,7 @@ export const profile = {
 
 export const about = {
   summary:
-    "AI Engineer who builds production AI agents, LLMs, RAG, and multimodal multi-agent systems. I focus on work that ships: RAG pipelines and agent orchestration with LangChain, LangGraph, and CrewAI, plus LLMOps and full-stack deployment. I own the full arc, from data and models to deployment and monitoring.",
+    "AI Engineer who builds production AI agents, LLMs, RAG, and multimodal multi-agent systems. I focus on work that ships: RAG pipelines and agent orchestration with LangChain and LangGraph, plus LLMOps and full-stack deployment. I own the full arc, from data and models to deployment and monitoring.",
   secondary:
     "I recently earned my M.S. in Applied AI from Stevens (May 2026) and am seeking new-grad AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
   interests: [
@@ -52,8 +52,6 @@ export const skills: { group: string; items: string[] }[] = [
     items: [
       "LangChain",
       "LangGraph",
-      "LlamaIndex",
-      "CrewAI",
       "RAG",
       "RAGAS",
       "Multi-Agent Systems",
@@ -73,12 +71,9 @@ export const skills: { group: string; items: string[] }[] = [
   {
     group: "Cloud, DevOps & Infrastructure",
     items: [
-      "AWS (ECS Fargate, S3, Lambda)",
       "Google Cloud Platform",
-      "BigQuery",
       "Azure",
       "Docker",
-      "Terraform",
       "PostgreSQL",
       "Supabase",
       "Redis",
