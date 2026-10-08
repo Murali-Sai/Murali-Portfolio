@@ -92,6 +92,19 @@ export const skills: { group: string; items: string[] }[] = [
 
 export const experience = [
   {
+    role: "AI Prompt Engineer (Volunteer)",
+    company: "Dreamline AI (Community Dreams Foundation)",
+    location: "Remote",
+    period: "Sep 2026 – Present",
+    highlights: [
+      "Ramped onto a Florida property-incentive platform piloting in Hillsborough County by reviewing 12 project documents, including a current-state audit of 85 tables and 35 edge functions, and surfaced a priority conflict between two planning documents that scheduled incentive ingestion as both a launch blocker and a final-sprint P1.",
+      "Designed a Supabase/PostgreSQL schema extension that lets a 141-program incentive catalog pre-fill homeowner applications, with a 21-key requirement registry across 5 categories, per-program requirements expressed as conditional JSON rules, and a three-valued condition engine that returns unknown rather than guessing, so the product asks the owner instead of assuming.",
+      "Secured the migration with Row Level Security scoping providers to their own programs, integrity constraints and audit triggers, then verified it against a production-sized catalog: 7 of 7 acceptance criteria passing, 0 of 141 existing rows altered, clean repeat runs proving idempotency, and malformed conditions and unregistered keys rejected.",
+      "Adapted the migration to the live schema in a Lovable planning pass, reusing existing columns rather than duplicating them, keeping eligibility rules separate from application requirements, and fixing an audit-trigger blocker that would have failed every insert, after baselining production at 141 programs, 1,151 matches and 5 applications. The SQL is with the data engineering lead for review.",
+    ],
+    stack: ["Supabase", "PostgreSQL", "Row Level Security", "SQL", "Database Migrations", "Lovable"],
+  },
+  {
     role: "Data Science Intern",
     company: "QuerKey Inc.",
     location: "Hayward, CA",
