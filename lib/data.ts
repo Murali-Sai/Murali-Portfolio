@@ -16,13 +16,14 @@ export const profile = {
 
 export const about = {
   summary:
-    "AI Engineer who builds production AI agents, LLMs, RAG, and multimodal multi-agent systems. I focus on work that ships: RAG pipelines and agent orchestration with LangChain and LangGraph, plus LLMOps and full-stack deployment. I own the full arc, from data and models to deployment and monitoring.",
+    "AI Engineer who builds production agentic systems: multi-agent orchestration with LangGraph, RAG pipelines from chunking and embeddings through reranking and grounding, and tool integration over the Model Context Protocol. I focus on work that ships and work that is measured rather than assumed to work, so evaluation harnesses, guardrails, and tracing go in alongside the features. I own the full arc, from data and schema design through deployment and monitoring.",
   secondary:
-    "I recently earned my M.S. in Applied AI from Stevens (May 2026) and am seeking new-grad AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
+    "I am currently building data and agent infrastructure for Dreamline AI, a Community Dreams Foundation project, and earned my M.S. in Applied AI from Stevens in May 2026. I am actively looking for AI/ML Engineer or Generative AI Engineer roles where I can build systems that scale and matter.",
   interests: [
     "Generative AI & LLMs",
     "Retrieval-Augmented Generation",
     "Multi-Agent Orchestration",
+    "LLM Evaluation & Guardrails",
     "LLMOps & Observability",
     "Computer Vision",
   ],
@@ -92,7 +93,7 @@ export const skills: { group: string; items: string[] }[] = [
 
 export const experience = [
   {
-    role: "AI Prompt Engineer (Volunteer)",
+    role: "AI Prompt Engineer",
     company: "Dreamline AI (Community Dreams Foundation)",
     location: "Remote",
     period: "Sep 2026 – Present",
