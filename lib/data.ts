@@ -1,11 +1,11 @@
 export const profile = {
   name: "Murali Sai",
   fullName: "Murali Sai Buddakkagari Venkata",
-  title: "AI/ML Engineer",
-  tagline: "LLM & RAG Systems · Multi-Agent Orchestration · LLMOps",
+  title: "AI Engineer",
+  tagline: "LLM Agents, RAG & Production AI Systems",
   org: "M.S. Applied AI, Stevens Institute of Technology",
   location: "New York City",
-  email: "muralijaps@gmail.com",
+  email: "murali140824@gmail.com",
   phone: "+1 (201) 275-6592",
   resume: "/Murali_Sai_Resume.pdf",
   socials: {
@@ -93,7 +93,7 @@ export const skills: { group: string; items: string[] }[] = [
 
 export const experience = [
   {
-    role: "AI Prompt Engineer",
+    role: "AI Engineer",
     company: "Dreamline AI (Community Dreams Foundation)",
     location: "Remote",
     period: "Sep 2026 – Present",
