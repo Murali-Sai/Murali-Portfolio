@@ -9,19 +9,19 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          DEFAULT: "#0a0a0b",
-          soft: "#141416",
+          DEFAULT: "rgb(var(--bg) / <alpha-value>)",
+          soft: "rgb(var(--bg-soft) / <alpha-value>)",
         },
-        surface: "rgba(255,255,255,0.03)",
+        lavender: "rgb(var(--lavender) / <alpha-value>)",
         accent: {
-          DEFAULT: "#ff3b2f",
-          soft: "#ff7a70",
-          deep: "#cc2a1e",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          soft: "rgb(var(--accent-soft) / <alpha-value>)",
+          deep: "rgb(var(--accent-deep) / <alpha-value>)",
         },
         ink: {
-          DEFAULT: "#f4f4f5",
-          muted: "#a1a1aa",
-          faint: "#6c6c74",
+          DEFAULT: "rgb(var(--ink) / <alpha-value>)",
+          muted: "rgb(var(--ink-muted) / <alpha-value>)",
+          faint: "rgb(var(--ink-faint) / <alpha-value>)",
         },
       },
       fontFamily: {
@@ -30,7 +30,7 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(255,59,47,0.2), 0 16px 50px -16px rgba(255,59,47,0.3)",
+        glow: "0 0 0 1px rgb(var(--accent) / 0.14), 0 18px 44px -20px rgb(var(--accent) / 0.3)",
       },
       keyframes: {
         "fade-up": {

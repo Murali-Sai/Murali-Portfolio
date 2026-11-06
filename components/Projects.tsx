@@ -63,7 +63,7 @@ export default function Projects() {
                       href={p.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-none border border-accent/60 bg-transparent px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent-soft transition-all hover:bg-accent hover:text-bg"
+                      className="inline-flex items-center gap-1.5 rounded-none border border-accent/60 bg-transparent px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent-soft transition-colors hover:bg-accent hover:text-bg"
                     >
                       View Deployed Site <ExternalLink size={13} />
                     </a>
@@ -72,7 +72,7 @@ export default function Projects() {
                       href={p.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-none border border-white/15 bg-transparent px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-ink-muted transition-all hover:border-accent hover:text-accent-soft"
+                      className="inline-flex items-center gap-1.5 rounded-none border border-accent/25 bg-transparent px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-ink-muted transition-colors hover:border-accent hover:text-accent-soft"
                     >
                       <Github size={13} /> Code
                     </a>

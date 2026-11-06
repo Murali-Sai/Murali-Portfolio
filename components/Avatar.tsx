@@ -34,7 +34,7 @@ export default function Avatar({ name }: { name: string }) {
             onError={() => setErrored(true)}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-deep to-accent/40 font-display text-4xl font-bold text-white">
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-deep to-accent font-display text-4xl font-bold text-bg">
             {initials}
           </div>
         )}

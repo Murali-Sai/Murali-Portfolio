@@ -3,7 +3,7 @@ import { profile } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-white/[0.06] pt-8 pb-10 text-center">
+    <footer className="mt-16 border-t border-accent/15 pt-8 pb-10 text-center">
       <div className="mb-4 flex items-center justify-center gap-4">
         <a
           href={profile.socials.github}

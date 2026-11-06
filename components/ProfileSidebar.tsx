@@ -44,7 +44,7 @@ export default function ProfileSidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-none border border-white/15 bg-transparent text-ink-muted transition-all hover:border-accent hover:text-accent-soft"
+              className="flex h-9 w-9 items-center justify-center rounded-none border border-accent/25 bg-transparent text-ink-muted transition-colors hover:border-accent hover:text-accent-soft"
             >
               <Icon size={16} />
             </a>
@@ -55,7 +55,7 @@ export default function ProfileSidebar() {
           href={profile.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 flex w-full items-center justify-center gap-2 rounded-none bg-accent px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-bg transition-all hover:bg-accent-soft"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-none bg-accent px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-bg transition-colors hover:bg-accent-soft"
         >
           <FileDown size={16} />
           Download CV

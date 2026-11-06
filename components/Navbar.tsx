@@ -41,9 +41,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "border-b border-white/[0.06] bg-bg/80 backdrop-blur-md"
+          ? "border-b border-accent/15 bg-bg/80 backdrop-blur-md"
           : "border-b border-transparent"
       }`}
     >
@@ -69,7 +69,7 @@ export default function Navbar() {
           href={profile.resume}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 rounded-none border border-accent/60 bg-transparent px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent-soft transition-all hover:bg-accent hover:text-bg sm:px-4"
+          className="shrink-0 rounded-none border border-accent/60 bg-transparent px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent-soft transition-colors hover:bg-accent hover:text-bg sm:px-4"
         >
           Resume
         </a>
