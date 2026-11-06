@@ -21,24 +21,23 @@ export default function Avatar({ name }: { name: string }) {
   }, []);
 
   return (
-    <div className="relative mx-auto h-36 w-36">
-      <div className="absolute -inset-1 rounded-none bg-gradient-to-br from-accent/30 to-accent-soft/20 blur-md" />
-      <div className="relative h-36 w-36 overflow-hidden rounded-none border-2 border-accent">
+    <figure className="m-0">
+      <div className="aspect-[4/5] w-full overflow-hidden bg-paper-3">
         {!errored ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             ref={imgRef}
             src="/avatar.jpg"
             alt={name}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-top"
             onError={() => setErrored(true)}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-deep to-accent font-display text-4xl font-bold text-bg">
+          <div className="flex h-full w-full items-center justify-center bg-accent font-display text-display-s text-accent-ink">
             {initials}
           </div>
         )}
       </div>
-    </div>
+    </figure>
   );
 }

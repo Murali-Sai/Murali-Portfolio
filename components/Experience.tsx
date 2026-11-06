@@ -1,50 +1,44 @@
-import { Briefcase } from "lucide-react";
 import { experience } from "@/lib/data";
 import Section from "./Section";
-import Reveal from "./Reveal";
 
+/**
+ * Experience as a Table (layout.md § 5.6): role, company, place and period in
+ * aligned columns with the period in tabular numerals, the bullets folded into
+ * a disclosure so the section can be scanned before it is read.
+ */
 export default function Experience() {
   return (
-    <Section id="experience" index={4} kicker="Where I've worked" title="Experience">
-      <div className="relative space-y-6 before:absolute before:left-[19px] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-gradient-to-b before:from-accent/40 before:via-accent/15 before:to-transparent">
-        {experience.map((job, idx) => (
-          <Reveal key={`${job.company}-${job.period}`} delay={idx * 70}>
-            <div className="relative pl-12">
-              <span className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-none border border-accent/40 bg-bg text-accent">
-                <Briefcase size={16} />
-              </span>
-              <div className="card card-hover p-6">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-display text-lg font-semibold text-ink">
-                    {job.role}
-                    <span className="text-accent"> · </span>
-                    <span className="text-accent-soft">{job.company}</span>
-                  </h3>
-                  <span className="shrink-0 font-mono text-[11px] text-ink-faint">
-                    {job.period}
-                  </span>
-                </div>
-                <p className="mt-0.5 text-xs text-ink-faint">{job.location}</p>
+    <Section id="experience" space="l" title="Experience">
+      <div>
+        {experience.map((job) => (
+          <article key={`${job.company}-${job.period}`} className="row py-xl">
+            <div className="grid12 items-baseline">
+              <div className="md:col-span-7">
+                <h3 className="text-title text-ink">{job.role}</h3>
+                <p className="mt-2xs text-ink-2">{job.company}</p>
+              </div>
+              <div className="mt-sm md:col-span-5 md:mt-0 md:text-right">
+                <p className="fig">{job.period}</p>
+                <p className="mt-2xs text-sm text-muted">{job.location}</p>
+              </div>
+            </div>
 
-                <ul className="mt-4 space-y-2.5">
+            <details className="mt-lg">
+              <summary>What I did there</summary>
+              <div className="grid12">
+                <ul className="m-0 list-none p-0 md:col-span-8">
                   {job.highlights.map((h, i) => (
-                    <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-muted">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent/70" />
-                      <span className="flex-1 text-justify">{h}</span>
+                    <li key={i} className="mb-md last:mb-0 max-w-[70ch] text-ink-2">
+                      {h}
                     </li>
                   ))}
                 </ul>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {job.stack.map((s) => (
-                    <span key={s} className="pill">
-                      {s}
-                    </span>
-                  ))}
-                </div>
+                <p className="mt-md text-sm text-muted md:col-span-4 md:mt-0">
+                  {job.stack.join(" · ")}
+                </p>
               </div>
-            </div>
-          </Reveal>
+            </details>
+          </article>
         ))}
       </div>
     </Section>

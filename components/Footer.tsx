@@ -1,38 +1,16 @@
-import { Github, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/lib/data";
 
+/**
+ * A colophon (layout.md § 7): one line under a hairline, which is the right
+ * close for a document.
+ */
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-accent/15 pt-8 pb-10 text-center">
-      <div className="mb-4 flex items-center justify-center gap-4">
-        <a
-          href={profile.socials.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="text-ink-muted transition-colors hover:text-accent-soft"
-        >
-          <Github size={18} />
-        </a>
-        <a
-          href={profile.socials.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          className="text-ink-muted transition-colors hover:text-accent-soft"
-        >
-          <Linkedin size={18} />
-        </a>
-        <a
-          href={`mailto:${profile.email}`}
-          aria-label="Email"
-          className="text-ink-muted transition-colors hover:text-accent-soft"
-        >
-          <Mail size={18} />
-        </a>
-      </div>
-      <p className="text-xs text-ink-faint">
-        © {new Date().getFullYear()} {profile.fullName}.
+    <footer className="container pb-2xl pt-xl">
+      <hr className="rule" />
+      <p className="mt-md text-sm text-muted">
+        © {new Date().getFullYear()} {profile.fullName}. Set in Instrument Serif
+        and Hanken Grotesk.
       </p>
     </footer>
   );

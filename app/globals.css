@@ -1,144 +1,28 @@
+/* Hallmark · shape: Index-First · genre: editorial · theme: brand · redesign: full
+ * paper: oklch(91.9% 0.003 85) · accent: oklch(45.4% 0.057 56) · display: Instrument Serif · body: Hanken Grotesk · hero: Index · nav: three-part bar · footer: colophon · signature: the work index that opens in place
+ * axes: light/high-contrast-serif/warm · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: E, two grotesks were doing one job and mono was labelling everything; cut the display to Instrument Serif and demoted mono to figures */
+/* Hallmark · waive 23 · posture: full-palette, declared in the stamp · the owner named Pale Lavender as a brand colour, so the band is a declared surface, not accent footprint */
+/* Hallmark · waive 44c · hero posture: Index · Index-First starts its list on the first screen, so the hero block is deliberately short of the fold */
+/* Hallmark · dropped the "Featured" star and the section eyebrows (01 / INTRODUCTION, TOOLBOX, SELECTED WORK, RESEARCH) · 54 and 67 name them; the index position carries the emphasis instead */
+/* Hallmark · reworded the card h3 "About Me" to "About", "Skills" to "Tools", "Projects" to "Selected work", "Publications" to "Research" · 67 names the tracked-capital labels they sat under */
+/* Hallmark · dropped {href} · the before record read it out of the old sidebar's href={href} template expression; it was never a destination */
+@import "./tokens.css";
+@import "./base.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── Palette ─────────────────────────────────────────────────────────────
-   Mocha Brown #6F4E37 · Platinum Silver #E5E4E2 · Pale Lavender #E6E0F0
-   Channels only, so Tailwind can apply opacity via rgb(var(--x) / <alpha>).
-   Every colour in this file and in tailwind.config.ts resolves here.      */
-:root {
-  color-scheme: light;
-
-  --bg: 229 228 226;        /* Platinum Silver — page ground      */
-  --bg-soft: 245 244 242;   /* raised surfaces (cards sit lighter) */
-  --lavender: 230 224 240;  /* Pale Lavender — secondary accent    */
-
-  --accent: 111 78 55;      /* Mocha Brown        5.86:1 on ground */
-  --accent-soft: 84 58 40;  /* deeper, for hover  8.22:1           */
-  --accent-deep: 62 42 28;
-
-  --ink: 36 26 18;          /* 12.9:1 */
-  --ink-muted: 92 74 60;    /*  6.6:1 */
-  --ink-faint: 110 95 82;   /*  4.8:1 */
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
-  overflow-x: clip;
-}
-
-body {
-  @apply bg-bg text-ink font-sans antialiased;
-  overflow-x: clip;
-  background-color: rgb(var(--bg));
-  background-image:
-    radial-gradient(42rem 42rem at 92% -8%, rgb(var(--lavender) / 0.85), transparent 58%),
-    radial-gradient(38rem 38rem at -8% 8%, rgb(var(--accent) / 0.07), transparent 55%);
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: rgb(var(--bg-soft));
-}
-::-webkit-scrollbar-thumb {
-  background: rgb(var(--accent) / 0.35);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--accent) / 0.6);
-}
-
-::selection {
-  background: rgb(var(--lavender));
-  color: rgb(var(--ink));
-}
-
-/* Focus ring — instant, never animated */
-:where(a, button, input, textarea, select, [tabindex]):focus-visible {
-  outline: 2px solid rgb(var(--accent));
-  outline-offset: 2px;
-  transition: none;
-}
-
-/* Hide scrollbar (used by the mobile nav row) */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Paper grain */
+/* Paper grain, the one texture. */
 .grain {
-  opacity: 0.035;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 160px 160px;
 }
 
-@layer components {
-  .card {
-    @apply rounded-none border border-accent/15 bg-bg-soft transition-colors duration-200;
-  }
-  .card-hover:hover {
-    @apply border-accent/45 shadow-glow;
-  }
-  .pill {
-    @apply inline-flex items-center rounded-none border border-accent/20 bg-transparent px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-ink-muted transition-colors hover:border-accent/60 hover:bg-lavender hover:text-accent-soft;
-  }
-  .section-title {
-    @apply font-display text-4xl font-extrabold uppercase tracking-tight text-ink md:text-5xl;
-  }
-  .section-kicker {
-    @apply inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.25em] text-accent;
-  }
-  .section-kicker::before {
-    content: "/";
-    @apply font-mono text-accent;
-  }
-  .section-index {
-    @apply inline-flex h-6 min-w-[1.75rem] items-center justify-center border border-accent/50 bg-lavender px-1 font-mono text-[0.7rem] font-bold leading-none tracking-widest text-accent;
-  }
-}
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
 
-/* Reveal-on-scroll */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Content must be readable without scripting */
-@media (scripting: none) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

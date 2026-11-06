@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 
+/* Every colour, face and step resolves to a token in app/tokens.css (Floor 1).
+   No alpha modifiers: the surface ladder uses its own rule and field tokens
+   rather than a translucent accent. */
 const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,46 +11,76 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: {
-          DEFAULT: "rgb(var(--bg) / <alpha-value>)",
-          soft: "rgb(var(--bg-soft) / <alpha-value>)",
+        paper: {
+          DEFAULT: "var(--color-paper)",
+          2: "var(--color-paper-2)",
+          3: "var(--color-paper-3)",
         },
-        lavender: "rgb(var(--lavender) / <alpha-value>)",
-        accent: {
-          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
-          soft: "rgb(var(--accent-soft) / <alpha-value>)",
-          deep: "rgb(var(--accent-deep) / <alpha-value>)",
-        },
+        field: "var(--color-field)",
         ink: {
-          DEFAULT: "rgb(var(--ink) / <alpha-value>)",
-          muted: "rgb(var(--ink-muted) / <alpha-value>)",
-          faint: "rgb(var(--ink-faint) / <alpha-value>)",
+          DEFAULT: "var(--color-ink)",
+          2: "var(--color-ink-2)",
+        },
+        muted: "var(--color-muted)",
+        rule: {
+          DEFAULT: "var(--color-rule)",
+          strong: "var(--color-rule-strong)",
+        },
+        accent: {
+          DEFAULT: "var(--color-accent)",
+          2: "var(--color-accent-2)",
+          ink: "var(--color-accent-ink)",
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
-        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        display: "var(--font-display)",
+        sans: "var(--font-body)",
+        mono: "var(--font-outlier)",
       },
-      boxShadow: {
-        glow: "0 0 0 1px rgb(var(--accent) / 0.14), 0 18px 44px -20px rgb(var(--accent) / 0.3)",
+      fontSize: {
+        xs: "var(--text-xs)",
+        sm: "var(--text-sm)",
+        base: "var(--text-md)",
+        lg: "var(--text-lg)",
+        xl: "var(--text-xl)",
+        lead: "var(--text-lead)",
+        title: "var(--text-title)",
+        section: "var(--text-section)",
+        "display-s": "var(--text-display-s)",
+        display: "var(--text-display)",
       },
-      keyframes: {
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-in": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
+      spacing: {
+        "3xs": "var(--space-3xs)",
+        "2xs": "var(--space-2xs)",
+        xs: "var(--space-xs)",
+        sm: "var(--space-sm)",
+        md: "var(--space-md)",
+        lg: "var(--space-lg)",
+        xl: "var(--space-xl)",
+        "2xl": "var(--space-2xl)",
+        "3xl": "var(--space-3xl)",
+        "4xl": "var(--space-4xl)",
       },
-      animation: {
-        "fade-up": "fade-up 0.6s ease-out both",
-        "fade-in": "fade-in 0.8s ease-out both",
+      borderRadius: {
+        card: "var(--radius-card)",
+        pill: "var(--radius-pill)",
+      },
+      transitionTimingFunction: {
+        out: "var(--ease-out)",
+        in: "var(--ease-in)",
+        "in-out": "var(--ease-in-out)",
+      },
+      transitionDuration: {
+        micro: "var(--dur-micro)",
+        short: "var(--dur-short)",
+        long: "var(--dur-long)",
+      },
+      zIndex: {
+        "sticky-nav": "var(--z-sticky-nav)",
       },
     },
   },
+  corePlugins: { container: false },
   plugins: [],
 };
 

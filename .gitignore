@@ -45,3 +45,6 @@ next-env.d.ts
 
 # local session handoff notes (not for the public repo)
 /handoff.md
+
+# hallmark design-run artifacts (screenshots, before/after records)
+/.hallmark/
