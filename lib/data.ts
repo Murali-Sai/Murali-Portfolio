@@ -107,7 +107,7 @@ export const experience = [
     stack: ["Supabase", "PostgreSQL", "Row Level Security", "SQL", "Database Migrations", "Lovable"],
   },
   {
-    role: "Data Science Intern",
+    role: "Data Science Engineer",
     company: "QuerKey Inc.",
     location: "Hayward, CA",
     period: "Jun 2025 – May 2026",
@@ -122,7 +122,7 @@ export const experience = [
     stack: ["Python", "SQL", "Gemini 2.5 Flash", "RAG", "OpenCV", "Pandas", "Streamlit", "Superset", "Power Automate", "Docker", "MLflow", "FastAPI", "ChromaDB", "HuggingFace"],
   },
   {
-    role: "AI & Automation Intern",
+    role: "Full-Stack Software Engineer",
     company: "VIEW Group India (formerly VIEW Synergy)",
     location: "Bengaluru, India",
     period: "Jan 2024 – Aug 2024",
