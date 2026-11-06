@@ -1,11 +1,12 @@
 import { projects } from "@/lib/data";
 import Section from "./Section";
+import Terms from "./Terms";
 
 /**
  * The signature: the work as an Index (layout.md § 5.15) — five hairline rows
  * a reader can scan in one pass, each opening in place into the full case.
- * The lead row is open by default, so the strongest project reads as a case
- * without a click (anatomy.md § hire).
+ * The lead row is open by default, set in two columns so the opened case reads
+ * as a composition rather than a slab of prose (layout.md § 8).
  */
 export default function Projects() {
   return (
@@ -28,14 +29,14 @@ export default function Projects() {
                 <h3 className="text-title text-ink">{p.name}</h3>
                 <p className="mt-sm max-w-[65ch] text-ink-2">{p.blurb}</p>
                 {p.measured && (
-                  <p className="fig mt-md max-w-[70ch] leading-relaxed">
-                    {p.measured}
-                  </p>
+                  <div className="mt-md">
+                    <Terms items={p.measured} tone="figure" />
+                  </div>
                 )}
               </div>
 
               <div className="mt-md md:col-span-4 md:mt-0">
-                <p className="text-sm text-muted">{p.stack.join(" · ")}</p>
+                <Terms items={p.stack} />
                 <p className="mt-md flex flex-wrap gap-lg text-sm">
                   {p.demo && (
                     <a
@@ -70,11 +71,11 @@ export default function Projects() {
               <summary>
                 {idx === 0 ? "How it works" : "Read the detail"}
               </summary>
-              <ul className="grid12 m-0 list-none p-0">
+              <ul className="m-0 columns-1 list-none gap-[var(--gap-columns)] p-0 lg:columns-2">
                 {p.highlights.map((h, i) => (
                   <li
                     key={i}
-                    className="md:col-span-10 md:col-start-2 mb-md last:mb-0 max-w-[70ch] text-ink-2"
+                    className="mb-lg break-inside-avoid text-ink-2 last:mb-0"
                   >
                     {h}
                   </li>

@@ -32,7 +32,6 @@ button, input, select, textarea { font: inherit; }
 
 /* Index and table rows: the hairline is the structure, so it is the only edge. */
 .row { border-top: var(--rule-hair) solid var(--color-rule); }
-.row:last-child { border-bottom: var(--rule-hair) solid var(--color-rule); }
 
 .fig { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; font-size: var(--text-sm); color: var(--color-muted); }
 

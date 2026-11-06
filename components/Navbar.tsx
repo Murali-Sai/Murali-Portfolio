@@ -51,7 +51,7 @@ export default function Navbar() {
     >
       <nav
         aria-label="Sections"
-        className="container flex h-[64px] items-center justify-between gap-lg"
+        className="container flex min-h-[64px] flex-wrap items-center justify-between gap-x-lg gap-y-xs py-sm"
       >
         <a
           href="#top"
@@ -60,7 +60,7 @@ export default function Navbar() {
           {profile.name}
         </a>
 
-        <ul className="no-scrollbar -mx-xs flex min-w-0 items-center gap-lg overflow-x-auto px-xs">
+        <ul className="order-3 m-0 flex w-full list-none flex-wrap items-center gap-x-lg gap-y-2xs p-0 md:order-none md:w-auto">
           {links.map((l) => (
             <li key={l.id} className="shrink-0">
               <a
@@ -80,7 +80,7 @@ export default function Navbar() {
 
         <a
           href={`mailto:${profile.email}`}
-          className="hidden shrink-0 text-sm text-accent underline decoration-rule-strong underline-offset-4 transition-colors duration-micro ease-out hover:text-accent-2 hover:decoration-current active:text-ink md:block"
+          className="shrink-0 text-sm text-accent underline decoration-rule-strong underline-offset-4 transition-colors duration-micro ease-out hover:text-accent-2 hover:decoration-current active:text-ink"
         >
           Get in touch
         </a>
