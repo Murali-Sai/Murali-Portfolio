@@ -134,17 +134,6 @@ export const experience = [
     ],
     stack: [".NET 8", "C#", "Azure Functions", "Azure", "Entra ID", "MySQL", "Redis", "ReactJS", "TypeScript"],
   },
-  {
-    role: "RPA Summer Intern",
-    company: "VIEW Group India (formerly VIEW Synergy)",
-    location: "Bengaluru, India",
-    period: "May 2023 – Aug 2023",
-    highlights: [
-      "Automated 7+ repetitive accounting workflows (invoice processing, reconciliation) with UiPath Studio and VB.Net, saving an estimated 15 hours per week of manual effort.",
-      "Designed reusable bot components that cut future RPA development time by 30%, with documented edge-case handling for non-technical maintainers.",
-    ],
-    stack: ["UiPath", "VB.Net", "RPA", "Automation"],
-  },
 ];
 
 export const projects = [
