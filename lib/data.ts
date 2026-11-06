@@ -99,9 +99,10 @@ export const experience = [
     period: "Sep 2026 – Present",
     highlights: [
       "Ramped onto a Florida property-incentive platform piloting in Hillsborough County by reviewing 12 project documents, including a current-state audit of 85 tables and 35 edge functions, and surfaced a priority conflict between two planning documents that scheduled incentive ingestion as both a launch blocker and a final-sprint P1.",
-      "Designed a Supabase/PostgreSQL schema extension that lets a 141-program incentive catalog pre-fill homeowner applications, with a 21-key requirement registry across 5 categories, per-program requirements expressed as conditional JSON rules, and a three-valued condition engine that returns unknown rather than guessing, so the product asks the owner instead of assuming.",
-      "Secured the migration with Row Level Security scoping providers to their own programs, integrity constraints and audit triggers, then verified it against a production-sized catalog: 7 of 7 acceptance criteria passing, 0 of 141 existing rows altered, clean repeat runs proving idempotency, and malformed conditions and unregistered keys rejected.",
-      "Adapted the migration to the live schema in a Lovable planning pass, reusing existing columns rather than duplicating them, keeping eligibility rules separate from application requirements, and fixing an audit-trigger blocker that would have failed every insert, after baselining production at 141 programs, 1,151 matches and 5 applications. The SQL is with the data engineering lead for review.",
+      "Developed and shipped a Supabase/PostgreSQL data layer that lets the incentive catalog pre-fill homeowner applications, with a 21-key requirement registry across 5 categories, per-program requirements expressed as conditional JSON rules, and a three-valued condition engine that returns unknown rather than guessing, so the product asks the owner instead of assuming.",
+      "Secured it with Row Level Security scoping providers to their own programs, integrity constraints and audit triggers, and applied it to production with all 7 acceptance criteria met and 0 of 269 existing programs altered.",
+      "De-risked the release with a Lovable planning pass, production baselining, and two rolled-back trial runs that caught 2 live-schema issues, including an audit-trigger blocker that would have failed every insert, before a SHA-256-verified apply.",
+      "Built the admin and provider requirements UI on the new layer, with a server-driven \"Apply Now\" readiness rule, and imported 120 new programs with 0 failures.",
     ],
     stack: ["Supabase", "PostgreSQL", "Row Level Security", "SQL", "Database Migrations", "Lovable"],
   },
@@ -179,6 +180,21 @@ export const projects = [
     github: "https://github.com/Murali-Sai/Rag-enterprise",
     demo: "https://rag-enterprise-dashboard-laa65asupq-uc.a.run.app",
     featured: true,
+  },
+  {
+    name: "FilingTune: LoRA Fine-Tuning for SEC Filing QA",
+    blurb:
+      "In progress. A QLoRA fine-tuning pipeline that turns a small open-weight model into the grounded answerer inside the SEC EDGAR RAG system, built to measure when fine-tuning is worth it rather than to assume it is.",
+    highlights: [
+      "Fine-tunes a small open-weight model with QLoRA to generate against retrieved filing passages under a strict Pydantic-validated contract of answer, citations, support flag and refusal reason, so every claim stays traceable to a chunk id and unsupported questions are declined rather than guessed.",
+      "Framed as a four-arm comparison on one frozen test set, the base model prompted, the fine-tuned model, the hosted generator currently serving the RAG system, and optionally a larger open model, so the deliverable is a decision memo on when to fine-tune versus prompt versus leave retrieval alone. A negative or mixed result counts as a result, provided it is measured properly.",
+      "Builds training data through the live retrieval pipeline so the model sees realistic contexts, including ones where the right passage was never retrieved, which is what teaches refusal. Splits run by company and filing section rather than by random row, with a 0.9 embedding-similarity gate against near-duplicates and SHA-256-hashed split manifests committed alongside the data card.",
+      "Holds the existing 54-question suite frozen and never tunes against it, judges with a model distinct from the labeling teacher, reports 95% bootstrap confidence intervals so differences inside the interval are not claimed, and runs a forgetting check against the base model. Serving exports a LoRA adapter plus merged and GGUF checkpoints behind an OpenAI-compatible FastAPI endpoint, wired into the RAG repo through a generator switch so the whole suite runs against either backend.",
+    ],
+    stack: ["QLoRA", "PEFT", "TRL", "Transformers", "bitsandbytes", "MLflow", "FastAPI", "vLLM / Ollama"],
+    github: null,
+    demo: null,
+    featured: false,
   },
   {
     name: "LegalLens-AI",
