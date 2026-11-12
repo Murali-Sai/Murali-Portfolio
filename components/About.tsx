@@ -13,11 +13,11 @@ export default function About() {
   return (
     <Section id="about" space="l" title="About">
       <div className="grid12 items-start">
-        <div className="md:col-span-4">
+        <div className="md:col-span-3">
           <Avatar name="Murali Sai" />
         </div>
 
-        <div className="mt-xl md:col-span-7 md:col-start-6 md:mt-0">
+        <div className="mt-xl md:col-span-8 md:col-start-5 md:mt-0">
           <p className="max-w-[68ch] text-ink-2">{about.summary}</p>
           <p className="mt-lg max-w-[68ch] text-ink-2">{about.secondary}</p>
           <div className="mt-xl">

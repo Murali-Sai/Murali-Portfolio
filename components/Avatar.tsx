@@ -22,13 +22,15 @@ export default function Avatar({ name }: { name: string }) {
 
   return (
     <figure className="m-0">
-      <div className="aspect-[4/5] w-full overflow-hidden bg-paper-3">
+      <div className="aspect-square w-full max-w-[320px] overflow-hidden bg-paper-3">
         {!errored ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             ref={imgRef}
             src="/avatar.jpg"
             alt={name}
+            width={640}
+            height={640}
             className="h-full w-full object-cover object-top"
             onError={() => setErrored(true)}
           />
